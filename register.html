@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferno Coders</title>
+    <link rel="stylesheet" href="/style/style.css">
+    
+</head>
+
+<body>
+    <div class="nav">
+
+        <ul>
+            <li class="linav"> <a class="navb" href="register.html">Register</a></li>
+            <li class="linav"> <a class="navb" href="aboutus.html">About Us</a></li>
+            <li class="linav"><a class="navb" href="contact.html">Contact</a></li>
+            <li class="linav"><a class="navb" href="/">Home</a></li>
+        </ul>
+    </div>
+
+   <div class="registercontainer">
+    <h1>Register</h1>
+    <form action="upload" method="POST">
+        <!-- <label for="Rollno">Roll no</label> -->
+        <input type="text" name="Rollno" id="Rollno" placeholder="Rollno" required>
+        <!-- <label for="email">Email</label> -->
+        <input type="email" name="email" id="email" placeholder="email" required>
+        <!-- <label for="codechefusername">Codechef Username</label> -->
+        <input type="text" name="codechefusername" id="codechefusername" placeholder="codechefusername">
+        <!-- <label for="leetcodeusername">LeetCode Username</label> -->
+        <input type="text" name="leetcodeusername" id="leetcodeusername" placeholder="leetcodeusername">
+        <!-- <label for="codeforcesusername">Codeforces Username</label> -->
+        <input type="text" name="codeforcesusername" id="codeforcesusername" placeholder="codeforcesusername">
+        <input type="submit" value="Register">
+    </form>
+    
+   </div>
+   <style>
+    body{
+        text-align: center;
+    }
+    .registercontainer {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+    h1 {
+        color: #0074d9;
+    }
+    input[type="text"], input[type="email"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        background-color: #0074d9;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+   </style>
+
+</body>
+
+</html>

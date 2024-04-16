@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contest Rankings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        h1 {
+            color: #0074d9;
+        }
+        input[type="text"], input[type="email"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #0074d9;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contest Rankings</h1>
+        <div>
+            <input type="text" id="name" placeholder="Name">
+            <br>
+            <input type="text" id="rollNo" placeholder="Roll No">
+            <br>
+            <input type="email" id="email" placeholder="Email ID">
+            <br>
+            <input type="text" id="leetcodeUsername" placeholder="Enter LeetCode Username">
+            <br>
+            <input type="text" id="codeforcesUsername" placeholder="Enter Codeforces Username">
+            <br>
+            <input type="text" id="codechefUsername" placeholder="Enter CodeChef Username">
+        </div>
+        <button onclick="fetchData()">Fetch Rankings</button>
+    </div>
+
+    <script>
+        function fetchData() {
+            var name = document.getElementById("name").value;
+            var rollNo = document.getElementById("rollNo").value;
+            var email = document.getElementById("email").value;
+            var leetcodeUsername = document.getElementById("leetcodeUsername").value;
+            var codeforcesUsername = document.getElementById("codeforcesUsername").value;
+            var codechefUsername = document.getElementById("codechefUsername").value;
+
+            fetchLeetCodeData(leetcodeUsername);
+            fetchCodeforcesData(codeforcesUsername);
+            fetchCodeChefData(codechefUsername);
+
+            // You can do something with the name, roll number, and email values if needed
+        }
+
+        function fetchLeetCodeData(username) {
+            console.log(username);
+            var apiUrl = `https://leetcode.com/graphql?query={userContestRanking(username:%20%20"${username}")%20{%20attendedContestsCount%20rating%20globalRanking%20totalParticipants%20topPercentage%20}}`;
+
+           fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                   // console.log(data); // Log data to console
+                })
+               .catch(error => {
+                    //console.error('Error fetching LeetCode data:', error);
+                });
+        }
+
+        function fetchCodeforcesData(username) {
+            console.log(username);
+            var apiUrl = `https://codeforces.com/api/user.info?handles=${username}&checkHistoricHandles=false`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data); // Log data to console
+                })
+                .catch(error => {
+                    console.error('Error fetching Codeforces data:', error);
+                });
+        }
+
+        function fetchCodeChefData(username) {
+         var apiUrl = `https://codechef-api.vercel.app/${username}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data); // Log data to console
+                })
+                .catch(error => {
+                    console.error('Error fetching CodeChef data:', error);
+                });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<div class="sec1">
+
+    <br>
+
+    <p class="para">Dedicated platform for showcasing the talent of RGIPT students in competitive programming
+        <br> Highlights achievements across platforms like Codeforces, CodeChef and Leetcode <br>
+        Reflects dedication, problem-solving skills, and achievements in competitive programming
+    </p>
+
+
+</div>
+<div class="sec2">
+    <h2 class="developer">Developed By </h2>
+    <p class="details">Name : Raksha Kumari
+        <br>
+        email id : 22cs3046@rgipt.ac.in
+    </p>
+    <img class="raksha" src="raksha.png">
+
+</div>
