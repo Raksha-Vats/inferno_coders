@@ -1,0 +1,143 @@
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+.nav{
+    list-style-type: none;
+    background-color: #7e7a7a;
+    justify-content: space-between;
+    height: 54px;
+}
+.linav{
+    float :right;
+    list-style: none;
+    justify-content: space-between;
+}
+.navb{
+    display: block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px 20px;
+}
+.navb:hover{
+    background-color: black;
+}
+
+.logo_and_name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    /* height: 45%; */
+}
+.logodiv #logodep{
+    width: 200px;
+    height: 200px;
+}
+.namediv{
+    text-align: left;
+    font-size: 40px;
+    font-weight: bold;
+}
+.plateformdiv{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    text-decoration: none;
+}
+
+.platforms {
+    width: 11vw;
+    height: 6vh;
+    border-radius: 15px 15px 15px 15px;
+    margin-top: 0;
+    margin:0px 20px;
+    font-size: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.toprankers{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #7e7a7a;
+    overflow: hidden;
+}
+.profile_card{
+    text-align: center;
+    width: 33%;
+    margin: 20px;
+    padding: auto;
+    background-color: #f0f0f0;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+/* .profile_image{
+    
+} */
+/* img{
+  
+    border-radius: 50%;
+    margin: 10px;
+} */
+
+.discription{
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #7e7a7a;
+    color: #f0f0f0;
+}
+.devsection{
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #7e7a7a;
+    color: #f0f0f0;
+}
+.developer .details{
+    text-align: center;
+    font-size: 40px;
+}
+
+.searchbar {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.searchbar input[type="text"] {
+    width: calc(60% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.searchbar input[type="submit"] {
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #a29d9d;
+    color: black;
+    cursor: pointer;
+}
+
+.searchbar input[type="submit"]:hover {
+    background-color: black;
+    color: white;
+}
